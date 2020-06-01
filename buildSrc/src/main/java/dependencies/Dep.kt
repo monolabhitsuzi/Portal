@@ -36,6 +36,7 @@ object Dep {
     }
 
     object Test {
+
         val junit = "junit:junit:4.12"
         val testRunner = "androidx.test:runner:1.3.0-alpha02"
         val testRules = "androidx.test:rules:1.3.0-alpha02"

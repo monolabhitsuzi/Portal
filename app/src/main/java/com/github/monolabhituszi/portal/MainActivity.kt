@@ -1,4 +1,4 @@
-package com.github.monolabhituszi.Portal
+package com.github.monolabhituszi.portal
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -26,6 +26,8 @@ android {
     }
 }
 
+android.dataBinding.enabled = true
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -36,4 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    implementation Dep.Epoxy.epoxy
+    implementation Dep.Epoxy.databindingSupport
 }

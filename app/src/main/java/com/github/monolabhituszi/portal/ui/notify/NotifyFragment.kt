@@ -9,7 +9,7 @@ import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentNotifyBinding
 
 class NotifyFragment : Fragment(R.layout.fragment_notify) {
-    private lateinit var binding : FragmentNotifyBinding
+    private lateinit var binding: FragmentNotifyBinding
     private lateinit var notifyViewModel: NotifyViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

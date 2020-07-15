@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentNotifyBinding
+import com.github.monolabhituszi.portal.model.SampleModel
 import com.github.monolabhituszi.portal.ui.notify.controller.NotifyController
 import kotlinx.android.synthetic.main.fragment_notify.*
-import com.github.monolabhituszi.portal.ui.notify.SampleModel
 
 class NotifyFragment : Fragment(R.layout.fragment_notify) {
     private lateinit var binding: FragmentNotifyBinding

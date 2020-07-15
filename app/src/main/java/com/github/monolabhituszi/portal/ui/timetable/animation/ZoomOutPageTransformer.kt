@@ -1,4 +1,4 @@
-package com.github.monolabhituszi.portal.ui.task.animation
+package com.github.monolabhituszi.portal.ui.timetable.animation
 
 import android.view.View
 import androidx.viewpager2.widget.ViewPager2

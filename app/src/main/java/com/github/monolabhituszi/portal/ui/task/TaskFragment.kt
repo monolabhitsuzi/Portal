@@ -9,24 +9,23 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
-import com.github.monolabhituszi.portal.databinding.FragmentTimetableBinding
-import com.github.monolabhituszi.portal.ui.timetable.TimetableViewModel
+import com.github.monolabhituszi.portal.databinding.FragmentTaskBinding
 
-class TimetableFragment : Fragment(R.layout.fragment_timetable) {
-    private lateinit var binding: FragmentTimetableBinding
-    private lateinit var timetableViewModel: TimetableViewModel
+class TaskFragment : Fragment(R.layout.fragment_task) {
+    private lateinit var binding: FragmentTaskBinding
+    private lateinit var taskViewModel: TaskViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentTimetableBinding.inflate(inflater, container, false)
+        binding = FragmentTaskBinding.inflate(inflater, container, false)
 
-        timetableViewModel = ViewModelProvider(this).get(TimetableViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_timetable, container, false)
+        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_task, container, false)
         val textView: TextView = root.findViewById(R.id.text_dashboard)
-        timetableViewModel.text.observe(viewLifecycleOwner, Observer {
+        taskViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

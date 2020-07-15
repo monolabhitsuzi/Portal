@@ -1,31 +1,31 @@
-package com.github.monolabhituszi.portal.ui.task
+package com.github.monolabhituszi.portal.ui.timetable
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
-import com.github.monolabhituszi.portal.databinding.FragmentTaskBinding
+import com.github.monolabhituszi.portal.databinding.FragmentTimetableBinding
 import com.github.monolabhituszi.portal.model.SampleModel
 import com.github.monolabhituszi.portal.ui.timetable.animation.ZoomOutPageTransformer
 
-class TaskFragment : Fragment(R.layout.fragment_task) {
-    private lateinit var binding: FragmentTaskBinding
-    private lateinit var taskViewModel: TaskViewModel
+class TimetableFragment : Fragment(R.layout.fragment_timetable) {
+    private lateinit var binding: FragmentTimetableBinding
+    private lateinit var timetableViewModel: TimetableViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         // binding
-        binding = FragmentTaskBinding.bind(view)
+        binding = FragmentTimetableBinding.bind(view)
 
         // view model
-        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+        timetableViewModel = ViewModelProvider(this).get(TimetableViewModel::class.java)
 
         // lifecycle
         binding.lifecycleOwner = this
 
-        val adapter = TaskAdapter()
+        val adapter = TimetableAdapter()
 
         val sampleItem = listOf(
             SampleModel(

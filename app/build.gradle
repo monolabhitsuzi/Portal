@@ -47,4 +47,5 @@ dependencies {
     implementation Dep.Epoxy.epoxy
     implementation Dep.Epoxy.databindingSupport
     kapt Dep.Epoxy.processer
+    implementation Dep.AndroidX.viewPager2
 }

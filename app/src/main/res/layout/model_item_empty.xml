@@ -5,7 +5,7 @@
     <data>
         <variable
             name="model"
-            type="com.github.monolabhituszi.portal.ui.notify.SampleModel" />
+            type="com.github.monolabhituszi.portal.model.SampleModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

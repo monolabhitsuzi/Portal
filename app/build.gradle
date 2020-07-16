@@ -3,6 +3,7 @@ import dependencies.Dep
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -45,4 +46,6 @@ dependencies {
 
     implementation Dep.Epoxy.epoxy
     implementation Dep.Epoxy.databindingSupport
+    kapt Dep.Epoxy.processer
+    implementation Dep.AndroidX.viewPager2
 }

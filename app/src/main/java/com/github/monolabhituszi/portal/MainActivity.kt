@@ -5,8 +5,6 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.findFragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.github.monolabhituszi.portal.databinding.ActivityMainBinding
@@ -25,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.top_bar_menu,menu)
+        menuInflater.inflate(R.menu.top_bar_menu, menu)
         return true
     }
 
@@ -33,10 +31,9 @@ class MainActivity : AppCompatActivity() {
         val navController =
             (supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
                     as NavHostFragment).navController
-        when(item.itemId){
+        when (item.itemId) {
             R.id.action_bar_settings -> navController.navigate(R.id.navigation_settings)
         }
         return true
     }
-
 }

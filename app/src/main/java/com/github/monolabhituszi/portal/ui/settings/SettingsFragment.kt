@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentSettingsBinding
 
-class SettingsFragment: Fragment(R.layout.fragment_settings) {
+class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     private lateinit var binding: FragmentSettingsBinding
     private lateinit var settingViewModel: SettingsViewModel
@@ -25,5 +25,4 @@ class SettingsFragment: Fragment(R.layout.fragment_settings) {
 
         binding.lifecycleOwner = this
     }
-
 }

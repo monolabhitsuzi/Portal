@@ -28,4 +28,11 @@
         android:name="com.github.monolabhituszi.portal.ui.task.TaskFragment"
         android:label="@string/title_task"
         tools:layout="@layout/fragment_task" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.github.monolabhituszi.portal.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings"/>
+    <action android:id="@+id/action_global_navigation_settings" app:destination="@id/navigation_settings"/>
 </navigation>

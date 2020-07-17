@@ -11,15 +11,15 @@ import com.github.monolabhituszi.portal.databinding.FragmentSettingsBinding
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     private lateinit var binding: FragmentSettingsBinding
-    private lateinit var settingViewModel: SettingsViewModel
+    private lateinit var settingsViewModel: SettingsViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentSettingsBinding.bind(view)
 
-        settingViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
-        settingViewModel.text.observe(viewLifecycleOwner, Observer {
+        settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
+        settingsViewModel.text.observe(viewLifecycleOwner, Observer {
             binding.textSetting.text = it
         })
 

@@ -22,7 +22,6 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
-          architecture: 'x64'
       - name: Setup Danger
         run: |
           gem install danger danger-checkstyle_format danger-checkstyle_format danger-android_lint

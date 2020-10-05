@@ -14,7 +14,7 @@ jobs:
         with:
           java-version: 1.8
       - name: run ktlintMain
-      run: ./gradlew ktlintMain
+        run: ./gradlew ktlintMain
       - name: run andoidLint
         run: ./gradlew lintDebug
       # Danger

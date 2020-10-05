@@ -25,7 +25,7 @@ jobs:
           architecture: 'x64'
       - name: Setup Danger
         run: |
-          gem install danger danger-swiftlint
+          gem install danger danger-checkstyle_format danger-checkstyle_format danger-android_lint
       - name: Run Danger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

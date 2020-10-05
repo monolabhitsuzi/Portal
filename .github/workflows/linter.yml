@@ -1,0 +1,35 @@
+name: Lint at master merged.
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Kt lint
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: run ktlintCheck
+        run: ./gradlew ktlintCheck
+      - uses: actions/upload-artifact@v2
+        with:
+          name: debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+      # Danger
+      - name: Setup ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          architecture: 'x64'
+      - name: install danger
+        run: |
+          gem install bundler
+          bundle install
+      - name: run danger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: danger

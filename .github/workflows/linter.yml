@@ -13,21 +13,20 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: run ktlintCheck
-        run: |
-          ./gradlew ktlintMain
-          ./gradlew lint
+      - name: run ktlintMain
+      run: ./gradlew ktlintMain
+      - name: run andoidLint
+        run: ./gradlew lintDebug
       # Danger
       - name: Setup ruby
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
           architecture: 'x64'
-      - name: install danger
+      - name: Setup Danger
         run: |
-          gem install bundler
-          bundle install
-      - name: run danger
+          gem install danger danger-swiftlint
+      - name: Run Danger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: danger

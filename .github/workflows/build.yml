@@ -14,6 +14,6 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
       - uses: actions/upload-artifact@v2
-          with:
-            name: debug.apk
-            path: file:///home/runner/work/Portal/Portal/app/build/outputs/apk/debug/app-debug.apk
+        with:
+          name: debug.apk
+          path: /app/build/outputs/apk/debug/app-debug.apk

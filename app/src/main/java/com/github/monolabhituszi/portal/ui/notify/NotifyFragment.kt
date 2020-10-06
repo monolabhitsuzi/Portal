@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentNotifyBinding
-import com.github.monolabhituszi.portal.model.SampleModel
+import com.github.monolabhituszi.portal.model.SampleNotifyModel
 import com.github.monolabhituszi.portal.ui.notify.controller.NotifyController
 import kotlinx.android.synthetic.main.fragment_notify.*
 
@@ -33,14 +33,16 @@ class NotifyFragment : Fragment(R.layout.fragment_notify) {
             it.setController(controller)
         }
 
-        val sampleData = listOf<SampleModel>(
-            SampleModel(
+        val sampleData = listOf<SampleNotifyModel>(
+            SampleNotifyModel(
                 title = "通知１",
-                description = "通知１だよー"
+                description = "通知１だよー",
+                date = "2020/04/01"
             ),
-            SampleModel(
+            SampleNotifyModel(
                 title = "通知2",
-                description = "通知2だよー"
+                description = "通知2だよー",
+                date = "2020/04/02"
             )
         )
 

@@ -12,7 +12,7 @@ object Dep {
         val Hyperion = "0.9.27"
         val Ktlint = "0.36.0"
         val Koin = "2.0.1"
-        val Epoxy = "3.9.0"
+        val Epoxy = "4.1.0"
         val Coil = "0.9.5"
         val MockK = "1.9.3"
         val Timber = "4.7.1"

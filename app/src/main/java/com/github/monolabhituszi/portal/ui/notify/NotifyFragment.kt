@@ -8,7 +8,6 @@ import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentNotifyBinding
 import com.github.monolabhituszi.portal.model.SampleNotifyModel
 import com.github.monolabhituszi.portal.ui.notify.controller.NotifyController
-import kotlinx.android.synthetic.main.fragment_notify.*
 
 class NotifyFragment : Fragment(R.layout.fragment_notify) {
     private lateinit var binding: FragmentNotifyBinding
@@ -29,14 +28,14 @@ class NotifyFragment : Fragment(R.layout.fragment_notify) {
 
         controller = NotifyController()
 
-        recycler_view.also {
+        binding.recyclerView.also {
             it.setController(controller)
         }
 
         val sampleData = listOf<SampleNotifyModel>(
             SampleNotifyModel(
-                title = "通知１",
-                description = "通知１だよー",
+                title = "通知1",
+                description = "通知1だよー",
                 date = "2020/04/01"
             ),
             SampleNotifyModel(

@@ -29,6 +29,8 @@
             android:text="@{title}"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="10sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,8 +38,11 @@
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:text="@{description}"
             android:textSize="30sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="10sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -47,6 +52,7 @@
             android:layout_height="match_parent"
             android:text="@{date}"
             android:textSize="16sp"
+            android:layout_marginRight="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/description" />
 
@@ -56,7 +62,6 @@
             android:background="@android:color/darker_gray"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

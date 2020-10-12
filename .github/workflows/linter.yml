@@ -1,0 +1,31 @@
+name: Lint at master merged.
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Kt lint
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: run ktlintMain
+        run: ./gradlew ktlintMain
+      - name: run andoidLint
+        run: ./gradlew lintDebug
+      # Danger
+      - name: Setup ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - name: Setup Danger
+        run: |
+          gem install danger danger-checkstyle_format danger-checkstyle_format danger-android_lint
+      - name: Run Danger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: danger

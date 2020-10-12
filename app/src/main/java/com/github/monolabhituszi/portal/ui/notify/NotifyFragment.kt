@@ -34,8 +34,8 @@ class NotifyFragment : Fragment(R.layout.fragment_notify) {
 
         val sampleData = listOf<SampleNotifyModel>(
             SampleNotifyModel(
-                title = "通知１",
-                description = "通知１だよー",
+                title = "通知1",
+                description = "通知1だよー",
                 date = "2020/04/01"
             ),
             SampleNotifyModel(

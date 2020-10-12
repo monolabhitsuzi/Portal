@@ -1,5 +1,6 @@
 package com.github.monolabhituszi.portal
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -28,11 +29,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val navController =
-            (supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-                    as NavHostFragment).navController
         when (item.itemId) {
-            R.id.action_bar_settings -> navController.navigate(R.id.navigation_settings)
+            R.id.action_bar_settings -> {
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+            }
         }
         return true
     }

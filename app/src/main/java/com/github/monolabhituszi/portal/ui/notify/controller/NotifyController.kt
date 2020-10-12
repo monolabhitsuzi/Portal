@@ -18,7 +18,7 @@ class NotifyController : TypedEpoxyController<List<SampleNotifyModel>>() {
         data.forEachIndexed { index, sampleNotifyModel ->
             val title = sampleNotifyModel.title
             val description = sampleNotifyModel.description
-            val date= sampleNotifyModel.date
+            val date = sampleNotifyModel.date
 
             itemNotify {
                 id("$index")

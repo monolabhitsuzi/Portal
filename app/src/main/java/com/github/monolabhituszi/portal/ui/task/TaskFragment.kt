@@ -47,8 +47,4 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
         controller.setData(sampleData)
         return binding.root
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
 }

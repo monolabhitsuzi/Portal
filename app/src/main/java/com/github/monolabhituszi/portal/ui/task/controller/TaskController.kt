@@ -4,9 +4,10 @@ import com.airbnb.epoxy.TypedEpoxyController
 import com.github.monolabhituszi.portal.itemEmpty
 import com.github.monolabhituszi.portal.itemTask
 import com.github.monolabhituszi.portal.model.SampleTaskModel
-import com.github.monolabhituszi.portal.ui.task.TaskEventHandler
 
-class TaskController : TypedEpoxyController<List<SampleTaskModel>>(), TaskEventHandler {
+class TaskController(
+    private val listener: Listener
+) : TypedEpoxyController<List<SampleTaskModel>>() {
     override fun buildModels(data: List<SampleTaskModel>?) {
         requireNotNull(data)
         if (data.isEmpty()) {
@@ -25,12 +26,12 @@ class TaskController : TypedEpoxyController<List<SampleTaskModel>>(), TaskEventH
                 title(title)
                 description(description)
                 remaining(remaining)
-                handler(this@TaskController)
+                listener { _ -> listener.onClickItem(index) }
             }
         }
     }
 
-    override fun onItemClick() {
-        println("Clicked")
+    interface Listener {
+        fun onClickItem(index: Int)
     }
 }

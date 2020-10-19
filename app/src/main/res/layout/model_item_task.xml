@@ -5,9 +5,11 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
-            name="handler"
-            type="com.github.monolabhituszi.portal.ui.task.TaskEventHandler" />
+            name="listener"
+            type="View.OnClickListener" />
 
         <variable
             name="title"
@@ -29,7 +31,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         android:foreground="?android:attr/selectableItemBackground"
-        android:onClick="@{() -> handler.onItemClick()}"
+        android:onClick="@{listener}"
         app:cardElevation="8dp">
 
         <LinearLayout

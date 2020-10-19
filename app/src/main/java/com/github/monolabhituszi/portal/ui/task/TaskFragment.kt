@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentTaskBinding
-import com.github.monolabhituszi.portal.model.SampleModel
+import com.github.monolabhituszi.portal.model.SampleTaskModel
 import com.github.monolabhituszi.portal.ui.task.controller.TaskController
 
 class TaskFragment : Fragment(R.layout.fragment_task) {
@@ -31,14 +31,16 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
             it.setController(controller)
         }
 
-        val sampleData = listOf<SampleModel>(
-            SampleModel(
+        val sampleData = listOf<SampleTaskModel>(
+            SampleTaskModel(
                 title = "タスク１",
-                description = "タスク１だよー"
+                description = "タスク１だよー",
+                remaining = "あと2日だよー"
             ),
-            SampleModel(
+            SampleTaskModel(
                 title = "タスク2",
-                description = "タスク2だよー"
+                description = "タスク2だよー",
+                remaining = "手遅れだよー"
             )
         )
 

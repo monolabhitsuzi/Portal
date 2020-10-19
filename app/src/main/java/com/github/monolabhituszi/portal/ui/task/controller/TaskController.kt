@@ -3,7 +3,6 @@ package com.github.monolabhituszi.portal.ui.task.controller
 import com.airbnb.epoxy.TypedEpoxyController
 import com.github.monolabhituszi.portal.itemEmpty
 import com.github.monolabhituszi.portal.itemTask
-import com.github.monolabhituszi.portal.model.SampleModel
 import com.github.monolabhituszi.portal.model.SampleTaskModel
 
 class TaskController : TypedEpoxyController<List<SampleTaskModel>>() {

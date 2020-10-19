@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentTaskBinding
-import com.github.monolabhituszi.portal.model.SampleModel
 import com.github.monolabhituszi.portal.model.SampleTaskModel
 import com.github.monolabhituszi.portal.ui.task.controller.TaskController
 

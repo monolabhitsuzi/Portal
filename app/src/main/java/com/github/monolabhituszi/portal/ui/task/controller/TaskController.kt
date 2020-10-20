@@ -5,7 +5,9 @@ import com.github.monolabhituszi.portal.itemEmpty
 import com.github.monolabhituszi.portal.itemTask
 import com.github.monolabhituszi.portal.model.SampleTaskModel
 
-class TaskController : TypedEpoxyController<List<SampleTaskModel>>() {
+class TaskController(
+    private val listener: Listener
+) : TypedEpoxyController<List<SampleTaskModel>>() {
     override fun buildModels(data: List<SampleTaskModel>?) {
         requireNotNull(data)
         if (data.isEmpty()) {
@@ -24,7 +26,12 @@ class TaskController : TypedEpoxyController<List<SampleTaskModel>>() {
                 title(title)
                 description(description)
                 remaining(remaining)
+                listener { _ -> listener.onClickItem(index) }
             }
         }
+    }
+
+    interface Listener {
+        fun onClickItem(index: Int)
     }
 }

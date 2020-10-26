@@ -22,7 +22,7 @@ class TaskController(
             val remaining = sampleModel.remaining
 
             itemTask {
-                id("task")
+                id(index)
                 title(title)
                 description(description)
                 remaining(remaining)

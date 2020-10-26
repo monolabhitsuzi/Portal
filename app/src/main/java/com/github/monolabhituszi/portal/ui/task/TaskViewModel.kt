@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.github.monolabhituszi.portal.model.SampleTaskModel
 
 class TaskViewModel : ViewModel() {
-    val list = MutableLiveData<List<SampleTaskModel>>().apply { value = listOf() }
+    val list = MutableLiveData<List<SampleTaskModel>>(emptyList())
 
     fun add(item: SampleTaskModel) {
         list.apply {

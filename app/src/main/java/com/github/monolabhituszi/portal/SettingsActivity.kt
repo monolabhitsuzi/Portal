@@ -24,11 +24,6 @@ class SettingsActivity : AppCompatActivity() {
             .commit()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.top_bar_menu, menu)
-        return true
-    }
-
     class SettingsFragment : PreferenceFragmentCompat() {
         private lateinit var parentContext: Context
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {

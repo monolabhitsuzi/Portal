@@ -1,8 +1,6 @@
 package com.github.monolabhituszi.portal.ui
 
-import android.app.Application
 import android.content.Context
-import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 

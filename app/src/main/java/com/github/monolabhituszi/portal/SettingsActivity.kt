@@ -30,11 +30,11 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
-        private lateinit var parentContext:Context
+        private lateinit var parentContext: Context
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
 
-            findPreference<ListPreference>("theme")?.setOnPreferenceChangeListener { preference, newValue ->
+            findPreference<ListPreference>("theme")?.setOnPreferenceChangeListener { _, newValue ->
                 Theme.applyTheme(parentContext, newValue.toString())
                 return@setOnPreferenceChangeListener true
             }

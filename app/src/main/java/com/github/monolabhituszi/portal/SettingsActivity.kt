@@ -8,7 +8,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
 import com.github.monolabhituszi.portal.databinding.ActivitySettingsBinding
-import com.github.monolabhituszi.portal.ui.Theme
 
 class SettingsActivity : AppCompatActivity() {
 

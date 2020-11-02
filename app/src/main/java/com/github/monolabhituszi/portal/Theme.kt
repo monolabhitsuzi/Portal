@@ -1,4 +1,4 @@
-package com.github.monolabhituszi.portal.ui
+package com.github.monolabhituszi.portal
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
@@ -13,7 +13,13 @@ class Theme {
 
         fun applyThemeConfig(context: Context) {
             val prefs = PreferenceManager.getDefaultSharedPreferences(context.applicationContext)
-            applyTheme(context, prefs.getString(key, default) ?: default)
+            applyTheme(
+                context,
+                prefs.getString(
+                    key,
+                    default
+                ) ?: default
+            )
         }
 
         fun applyTheme(context: Context, mode: String) {

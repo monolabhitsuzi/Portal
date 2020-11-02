@@ -2,7 +2,6 @@ package com.github.monolabhituszi.portal
 
 import android.content.Context
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.preference.ListPreference
@@ -21,11 +20,6 @@ class SettingsActivity : AppCompatActivity() {
             .beginTransaction()
             .replace(R.id.settings_container, SettingsFragment())
             .commit()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.top_bar_menu, menu)
-        return true
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {

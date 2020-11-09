@@ -1,11 +1,13 @@
 package com.github.monolabhituszi.portal.ui.task
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
+import com.github.monolabhituszi.portal.TaskActivity
 import com.github.monolabhituszi.portal.databinding.FragmentTaskBinding
 import com.github.monolabhituszi.portal.model.SampleTaskModel
 import com.github.monolabhituszi.portal.ui.task.controller.TaskController
@@ -30,7 +32,18 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
         controller = TaskController(
             object : TaskController.Listener {
                 override fun onClickItem(index: Int) {
-                    Toast.makeText(activity, "$index clicked!", Toast.LENGTH_SHORT).show()
+                    // sample start activity
+                    val intent = Intent(context, TaskActivity::class.java)
+                    startActivity(intent)
+                    // sample add list
+                    val count = (taskViewModel.list.value?.size ?: 0) + 1
+                    taskViewModel.add(
+                        SampleTaskModel(
+                            title = "タスク$count",
+                            description = "タスク${count}だよー",
+                            remaining = "あと${count}日だよー"
+                        )
+                    )
                 }
             }
         )
@@ -39,19 +52,14 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
             it.setController(controller)
         }
 
-        val sampleData = listOf<SampleTaskModel>(
+        taskViewModel.add(
             SampleTaskModel(
-                title = "タスク１",
-                description = "タスク１だよー",
-                remaining = "あと2日だよー"
-            ),
-            SampleTaskModel(
-                title = "タスク2",
-                description = "タスク2だよー",
-                remaining = "手遅れだよー"
+                title = "タスク1",
+                description = "タスク1だよー",
+                remaining = "あと1日だよー"
             )
         )
 
-        controller.setData(sampleData)
+        taskViewModel.list.observe(viewLifecycleOwner, Observer(controller::setData))
     }
 }

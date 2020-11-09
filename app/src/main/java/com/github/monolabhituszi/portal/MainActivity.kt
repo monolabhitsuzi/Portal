@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
             (supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
                     as NavHostFragment).navController
         setupWithNavController(nav_view, navController)
+
+        Theme.applyThemeConfig(baseContext)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

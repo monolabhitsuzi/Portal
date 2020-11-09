@@ -2,12 +2,10 @@ package com.github.monolabhituszi.portal.ui.attendance
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentAttendanceBinding
-import com.github.monolabhituszi.portal.model.SampleTaskModel
 import com.github.monolabhituszi.portal.ui.attendance.controller.AttendanceController
 
 class AttendanceFragment : Fragment(R.layout.fragment_attendance) {
@@ -26,6 +24,5 @@ class AttendanceFragment : Fragment(R.layout.fragment_attendance) {
 
         // lifecycle
         binding.lifecycleOwner = this
-
     }
 }

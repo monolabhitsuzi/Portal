@@ -21,4 +21,8 @@
         android:icon="@drawable/ic_task_black_24dp"
         android:title="@string/title_task" />
 
+    <item
+        android:id="@+id/navigation_attendance"
+        android:icon="@drawable/ic_attendance_black_24dp"
+        android:title="@string/title_attendance" />
 </menu>

@@ -17,17 +17,23 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notify" />
 
-    <fragment
-        android:id="@+id/navigation_timetable"
-        android:name="com.github.monolabhituszi.portal.ui.timetable.TimetableFragment"
-        android:label="@string/title_timetable"
-        tools:layout="@layout/fragment_timetable" />
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_timetable"-->
+<!--        android:name="com.github.monolabhituszi.portal.ui.timetable.TimetableFragment"-->
+<!--        android:label="@string/title_timetable"-->
+<!--        tools:layout="@layout/fragment_timetable" />-->
 
     <fragment
         android:id="@+id/navigation_task"
         android:name="com.github.monolabhituszi.portal.ui.task.TaskFragment"
         android:label="@string/title_task"
         tools:layout="@layout/fragment_task" />
+
+    <fragment
+        android:id="@+id/navigation_attendance"
+        android:name="com.github.monolabhituszi.portal.ui.attendance.AttendanceFragment"
+        android:label="@string/title_attendance"
+        tools:layout="@layout/fragment_attendance" />
 
     <fragment
         android:id="@+id/navigation_settings"

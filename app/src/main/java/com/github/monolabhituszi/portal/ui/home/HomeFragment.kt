@@ -47,7 +47,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         // get current weekday and apply
         val today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
-        tabLayout.setScrollPosition(today,0f,true)
+        tabLayout.setScrollPosition(today, 0f, true)
         viewPager.currentItem = today
     }
 }

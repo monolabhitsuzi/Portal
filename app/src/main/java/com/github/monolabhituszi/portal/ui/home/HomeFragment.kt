@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentHomeBinding
@@ -46,26 +45,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             tab.text = weekdays[position]
         }.attach()
 
-        val today = Calendar.getInstance()
-        tabLayout.getTabAt(today.get(Calendar.DAY_OF_WEEK))?.select()
+        // get current weekday and apply
+        val today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
+        tabLayout.setScrollPosition(today,0f,true)
+        viewPager.currentItem = today
     }
 }
-
-class HomeCollectionAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
-
-    override fun getItemCount(): Int = 8
-
-    override fun createFragment(position: Int): Fragment {
-        // Return a NEW fragment instance in createFragment(int)
-        val fragment = TimeTableItem()
-        fragment.arguments = Bundle().apply {
-            // Our object is just an integer :-P
-            putInt(ARG_OBJECT, position + 1)
-        }
-        return fragment
-    }
-}
-
-private const val ARG_OBJECT = "object"
-
-class TimeTableItem : Fragment()

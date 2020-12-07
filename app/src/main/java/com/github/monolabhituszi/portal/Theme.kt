@@ -14,7 +14,6 @@ class Theme {
         fun applyThemeConfig(context: Context) {
             val prefs = PreferenceManager.getDefaultSharedPreferences(context.applicationContext)
             applyTheme(
-                context,
                 prefs.getString(
                     key,
                     default
@@ -22,7 +21,7 @@ class Theme {
             )
         }
 
-        fun applyTheme(context: Context, mode: String) {
+        fun applyTheme(mode: String) {
             when (mode) {
                 default -> {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_UNSPECIFIED)

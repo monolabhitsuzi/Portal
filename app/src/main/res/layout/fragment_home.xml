@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/colorAccent"
-            app:tabIndicatorGravity="top" />
+            app:tabIndicatorGravity="bottom" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/pager"

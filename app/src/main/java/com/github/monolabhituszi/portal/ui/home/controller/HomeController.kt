@@ -1,11 +1,11 @@
 package com.github.monolabhituszi.portal.ui.home.controller
 //
-//import com.airbnb.epoxy.TypedEpoxyController
-//import com.github.monolabhituszi.portal.itemTimetable
-//import com.github.monolabhituszi.portal.model.SampleHomeModel
-//import com.github.monolabhituszi.portal.ui.home.HomeFragment
+// import com.airbnb.epoxy.TypedEpoxyController
+// import com.github.monolabhituszi.portal.itemTimetable
+// import com.github.monolabhituszi.portal.model.SampleHomeModel
+// import com.github.monolabhituszi.portal.ui.home.HomeFragment
 //
-//class HomeController : TypedEpoxyController<List<SampleHomeModel>>() {
+// class HomeController : TypedEpoxyController<List<SampleHomeModel>>() {
 //    override fun buildModels(data: List<SampleHomeModel>?) {
 //        requireNotNull(data)
 //        if (data.isEmpty()) return
@@ -29,4 +29,4 @@ package com.github.monolabhituszi.portal.ui.home.controller
 //            }
 //        }
 //    }
-//}
+// }

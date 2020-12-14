@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentHomeBinding
-//import com.github.monolabhituszi.portal.ui.home.controller.HomeController
+// import com.github.monolabhituszi.portal.ui.home.controller.HomeController
 import com.google.android.material.tabs.TabLayoutMediator
 import java.util.*
 

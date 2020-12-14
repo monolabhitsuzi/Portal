@@ -1,14 +1,11 @@
 package com.github.monolabhituszi.portal.ui.timetable
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.R
-import com.github.monolabhituszi.portal.TaskActivity
-import com.github.monolabhituszi.portal.databinding.FragmentTaskBinding
 import com.github.monolabhituszi.portal.databinding.FragmentTimetableBinding
 import com.github.monolabhituszi.portal.model.SampleTimetableModel
 import com.github.monolabhituszi.portal.ui.timetable.controller.TimetableController
@@ -45,7 +42,7 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
                 description = "AAAする授業です",
                 weekday = "4",
                 time = "1",
-                location = "A教室",
+                location = "A教室"
             )
         )
 
@@ -55,7 +52,7 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
                 description = "BBBする授業です",
                 weekday = "2",
                 time = "2",
-                location = "B教室",
+                location = "B教室"
             )
         )
 

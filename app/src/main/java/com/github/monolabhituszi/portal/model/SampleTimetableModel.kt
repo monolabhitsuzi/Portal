@@ -5,5 +5,5 @@ data class SampleTimetableModel(
     val description: String?,
     val weekday: String?,
     val time: String?,
-    val location: String?,
+    val location: String?
 )

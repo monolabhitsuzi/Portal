@@ -1,8 +1,10 @@
 package com.github.monolabhituszi.portal.ui.notify
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.github.monolabhituszi.portal.NotifyActivity
@@ -33,6 +35,7 @@ class NotifyFragment : Fragment(R.layout.fragment_notify) {
                 override fun onClickItem(index: Int) {
                     val intent = Intent(context, NotifyActivity::class.java)
                     startActivity(intent)
+                    binding.recyclerView[index].setBackgroundColor(Color.LTGRAY)
                 }
             }
         )

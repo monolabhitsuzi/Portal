@@ -32,7 +32,7 @@ class NotifyController(
         }
     }
 
-    interface Listener{
+    interface Listener {
         fun onClickItem(index: Int)
     }
 }

@@ -31,7 +31,7 @@ class NotifyFragment : Fragment(R.layout.fragment_notify) {
         binding.lifecycleOwner = this
 
         controller = NotifyController(
-            object : NotifyController.Listener{
+            object : NotifyController.Listener {
                 override fun onClickItem(index: Int) {
                     val intent = Intent(context, NotifyActivity::class.java)
                     startActivity(intent)

@@ -9,6 +9,7 @@ import com.github.monolabhituszi.portal.R
 import com.github.monolabhituszi.portal.databinding.FragmentHomeBinding
 // import com.github.monolabhituszi.portal.ui.home.controller.HomeController
 import com.google.android.material.tabs.TabLayoutMediator
+import java.util.*
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -18,7 +19,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var homeViewModel: HomeViewModel
-//    private lateinit var controller: HomeController
 
     private lateinit var adapter: HomeCollectionAdapter
     private lateinit var viewPager: ViewPager2
@@ -45,8 +45,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }.attach()
 
         // get current weekday and apply
-//        val today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
-//        tabLayout.setScrollPosition(today, 0f, true)
-//        viewPager.currentItem = today
+        val today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
+        tabLayout.setScrollPosition(today, 0f, true)
+        viewPager.currentItem = today
     }
 }

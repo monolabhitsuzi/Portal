@@ -36,25 +36,46 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
             }
         )
 
-        timetableViewModel.add(
+        val provider = ViewModelProvider(this).get(TimetableViewModel::class.java)
+        val models = listOf(
             SampleTimetableModel(
                 title = "AAA",
                 description = "AAAする授業です",
-                weekday = "4",
+                weekday = 1,
+                time = "4",
+                location = "A教室"
+            ),
+            SampleTimetableModel(
+                title = "AAA",
+                description = "AAAする授業です",
+                weekday = 2,
+                time = "3",
+                location = "A教室"
+            ),
+            SampleTimetableModel(
+                title = "AAA",
+                description = "AAAする授業です",
+                weekday = 3,
                 time = "1",
                 location = "A教室"
-            )
-        )
-
-        timetableViewModel.add(
+            ),
             SampleTimetableModel(
                 title = "BBB",
                 description = "BBBする授業です",
-                weekday = "2",
+                weekday = 6,
                 time = "2",
                 location = "B教室"
             )
         )
+
+        provider.clear()
+        models.filter { model ->
+            model.weekday == arguments?.get("object")
+        }.filter { model ->
+            !provider.contains(model)
+        }.forEach { model ->
+            provider.add(model)
+        }
 
         binding.recyclerView.also {
             it.setController(controller)

@@ -16,4 +16,24 @@ class TimetableViewModel : ViewModel() {
             }
         }
     }
+
+    fun clear() {
+        list.apply {
+            this.value?.let {
+                val list = it.toMutableList()
+                list.clear()
+                this.value = list
+            }
+        }
+    }
+
+    fun contains(item: SampleTimetableModel): Boolean {
+        list.apply {
+            this.value?.let {
+                val list = it.toMutableList()
+                return list.contains(item)
+            }
+            return false
+        }
+    }
 }

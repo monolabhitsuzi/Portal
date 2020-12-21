@@ -14,7 +14,7 @@ class HomeCollectionAdapter(fragment: Fragment) : FragmentStateAdapter(fragment)
     override fun createFragment(position: Int): Fragment {
         val fragment = TimetableFragment()
         fragment.arguments = Bundle().apply {
-            putInt(ARG_OBJECT, position + 1)
+            putInt(ARG_OBJECT, position)
         }
         return fragment
     }

@@ -5,7 +5,9 @@ import com.github.monolabhituszi.portal.itemEmpty
 import com.github.monolabhituszi.portal.itemNotify
 import com.github.monolabhituszi.portal.model.SampleNotifyModel
 
-class NotifyController : TypedEpoxyController<List<SampleNotifyModel>>() {
+class NotifyController(
+    private val listener: Listener
+) : TypedEpoxyController<List<SampleNotifyModel>>() {
     override fun buildModels(data: List<SampleNotifyModel>?) {
         requireNotNull(data)
         if (data.isEmpty()) {
@@ -21,11 +23,16 @@ class NotifyController : TypedEpoxyController<List<SampleNotifyModel>>() {
             val date = sampleNotifyModel.date
 
             itemNotify {
-                id("$index")
+                id(index)
                 title(title)
                 description(description)
                 date(date)
+                listener { _ -> listener.onClickItem(index) }
             }
         }
+    }
+
+    interface Listener{
+        fun onClickItem(index: Int)
     }
 }

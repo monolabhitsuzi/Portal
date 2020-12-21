@@ -2,7 +2,7 @@ package dependencies
 
 object Dep {
     private object LibsVersion {
-        val Kotlin = "1.3.61"
+        val Kotlin = "1.4.20"
         val KotlinCoroutines = "1.3.3"
         val Room = "2.2.3"
         val Navigation = "2.2.1"
@@ -25,7 +25,7 @@ object Dep {
     }
 
     object GradlePlugin {
-        val android = "com.android.tools.build:gradle:3.6.1"
+        val android = "com.android.tools.build:gradle:4.1.1"
         val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${LibsVersion.Kotlin}"
         val safeArgs =
             "androidx.navigation:navigation-safe-args-gradle-plugin:${LibsVersion.Navigation}"

@@ -28,7 +28,7 @@ class SettingsActivity : AppCompatActivity() {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
 
             findPreference<ListPreference>("theme")?.setOnPreferenceChangeListener { _, newValue ->
-                Theme.applyTheme(parentContext, newValue.toString())
+                Theme.applyTheme(newValue.toString())
                 return@setOnPreferenceChangeListener true
             }
         }

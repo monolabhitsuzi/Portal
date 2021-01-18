@@ -33,7 +33,15 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
             object : TaskController.Listener {
                 override fun onClickItem(index: Int) {
                     // sample start activity
+                    val item = taskViewModel.list.value?.get(index)
+
+                    val bundle = Bundle()
+                    bundle.putString("title", item?.title)
+                    bundle.putString("description", item?.description)
+                    bundle.putString("remaining", item?.remaining)
+
                     val intent = Intent(context, TaskActivity::class.java)
+                    intent.putExtra("DATA", bundle)
                     startActivity(intent)
                     // sample add list
                     val count = (taskViewModel.list.value?.size ?: 0) + 1

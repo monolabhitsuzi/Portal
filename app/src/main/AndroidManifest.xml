@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".NotifyActivity"
+            android:label="@string/title_activity_notify">
+        </activity>
+        <activity
             android:name=".TaskActivity"
             android:label="@string/title_activity_task">
         </activity>

@@ -2,6 +2,7 @@ package com.github.monolabhituszi.portal.ui.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -47,6 +48,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         // get current weekday and apply
         val today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
         tabLayout.setScrollPosition(today, 0f, true)
-        viewPager.currentItem = today
+        viewPager.doOnPreDraw { viewPager.currentItem = today }
     }
 }

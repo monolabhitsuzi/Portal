@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".NotifyActivity"
-            android:label="NotifyActivity">
+            android:label="@string/title_activity_notify">
         </activity>
         <activity
             android:name=".TaskActivity"
